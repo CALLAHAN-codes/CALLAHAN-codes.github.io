@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="client/styles/style.css"> <!-- css import -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- icons import -->
+    <title>Star Wars</title>
+</head>
+<body onload="handleOnLoad()">
+
+    <!-- we load the scene & api seperately in script so you don't have to wait for scene to load to get data -->
+    <div id="loading-screen">
+
+        <div>
+            <span class="loader"></span>
+            <p>Loading Scene</p>
+        </div>
+    
+    </div>
+
+    <!-- 3D scene -->
+    <!-- ik i'm yapping i'm sorry but pls read
+        the scene loads and works perfect with no errors when I use the "Live Server" plugin in VScode OR when I use a XAMPP server. On
+        the other hand, it does NOT load when I copy/paste the index.html path into the browser. I get a CORS error when I do. You probably know a workaround.
+
+        I'm currently building a site for a windows desktop app I made over summer. It's in the early stages: https://appshub.tech/ but
+        it has a working 3D scene that follows the same logic/coding practices as this scene (although implemented a bit different to follow wordpress config using php), 
+        meaning it WILL work unless the path is copied/pasted into the browser (at least, in my case), rather than hosted on a server.
+    -->
+    <span class="scene"><canvas id="canvas"></canvas></span>
+
+    <!-- header -->
+    <header>
+        <div class="center-content">
+            <div>
+                <h1>star wars</h1>
+                <h2>character api</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main>
+
+        <!-- container -->
+        <div class="container">
+
+            <!-- alert -->
+            <div id="alert">
+                <div id="loading">Fetching API ...</div>
+            </div>
+
+            <!-- display -->
+            <div id="app"></div>
+
+        </div>
+
+    </main>
+
+    <!-- main script call -->
+    <script src="client/script/script.js"></script>
+
+    <!-- THREEJS scene call -->
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.module.js"
+        }
+    }
+    </script>
+    <script type="module" src="client/script/scene.js"></script>
+
+</body>
+</html>
