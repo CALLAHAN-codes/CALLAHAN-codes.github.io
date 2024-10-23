@@ -1,0 +1,43 @@
+footer 
+{
+    /* position */
+    position: relative;
+    bottom: 0;
+
+    /* colors */
+    background-color: var(--dark-grey);
+    color: var(--white);
+
+    /* dimensions */
+    height: 120px;
+    width: 100%;
+
+    /* spacing */
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
+
+    /* display */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div 
+{
+    /* container */
+    width: 100%;
+    max-width: 1400px;
+}
+
+footer div a
+{
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer div a:hover
+{
+    color: var(--red);
+    text-decoration: underline;
+}

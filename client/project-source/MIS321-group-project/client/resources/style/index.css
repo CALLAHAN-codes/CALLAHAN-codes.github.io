@@ -1,0 +1,311 @@
+/* CONFIGURATION */
+/* imports */
+@import url('https://fonts.cdnfonts.com/css/montserrat'); /* font */
+@import url('./loader.css'); /* loader */
+@import url('./nav.css'); /* navigation */
+@import url('./footer.css'); /* footer */
+
+/* variables */
+:root 
+{
+    /* 
+        we use this for colors, check this link for variables | https://www.w3schools.com/css/css3_variables.asp
+    */
+    --red: #9E1B32;
+    --light-grey: #dfdfdf;
+    --dark-grey: #222222;
+    --white: #ffffff;
+}
+
+/* dom */
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+/* TEXT */
+/* headings */
+h1, h2,
+h3, h4,
+h5, h6
+{
+    font-weight: bold;
+    color: var(--dark-grey);
+    margin-bottom: 20px;
+}
+
+h1
+{
+    font-size: 80px;
+}
+
+h2
+{
+    font-size: 65px;
+}
+
+h3
+{
+    font-size: 50px;
+}
+
+h4
+{
+    font-size: 35px;
+}
+
+h5
+{
+    font-size: 20px;
+}
+
+h6
+{
+    font-size: 10px;
+}
+
+/* styles */
+.txt-color-dark
+{
+    color: var(--dark-grey);
+}
+
+.text-color-crimson
+{
+    color: var(--red);
+}
+
+
+
+
+
+/* CONTAINERS */
+/* header */
+header 
+{
+    /* position */
+    position: relative;
+    top: 0;
+    left: 0;
+
+    /* dimensions */
+    width: 100%;
+    height: 75vh;
+
+    /* background */
+    background: rgb(158,27,50);
+    background: linear-gradient(39deg, var(--red) 0%, var(--red) 50%, rgba(0,0,0,0.6502976190476191) 50%); /* fallback */
+    background-image: linear-gradient(39deg, var(--red) 0%, var(--red) 50%, rgba(0,0,0,0.6502976190476191) 50%), url('https://www.nicksofclinton.com/wp-content/uploads/2021/05/Nicks-Catering.jpg'); 
+    background-size: cover;
+
+    /* display */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* text */
+    color: var(--white);
+    text-align: center;
+}
+
+header h1,
+header h5
+{
+    color: var(--white);
+}
+
+/* main */
+main
+{
+    /* dimensions | stop horizontal overflow */
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+/* container | styles */
+.container
+{
+    /* dimensions */
+    height: auto; 
+    width: 100%;
+    max-width: 1400px;
+
+    /* spacing */
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 60px auto;
+
+    /* border */
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.container p 
+{
+    font-size: 24px;
+}
+ 
+.con-color-dark
+{
+    /* bg and text color */
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+.con-color-crimson
+{
+    /* bg and text color */
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.con-border 
+{
+    /* border color */
+    border-color: var(--dark-grey);
+}
+
+/* info box */
+.info-box
+{
+    width: 100%;
+    background-color: var(--light-grey);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-bottom: 15px;
+    margin: 30px auto;
+}
+
+.info-box p
+{
+    margin: 20px auto
+}
+
+.image-box {
+    background-color: var(--light-grey);
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.ib-text {
+    background-color: var(--light-grey);
+    height: auto;
+    min-height: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+
+.btn 
+{
+    background-color: var(--red);
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.btn:hover
+{
+    background-color: var(--white);
+    border-color: var(--red);
+    color: var(--dark-grey);
+}
+
+/* grid */
+.grid
+{
+    display: grid;
+}
+
+.col-2
+{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.col-3
+{
+    grid-template-columns: repeat(3,1fr);
+}
+
+.col-4
+{
+    grid-template-columns: repeat(4,1fr);
+}
+
+.col-long-left
+{
+    grid-template-columns: 75% auto;
+}
+
+.col-long-right
+{
+    grid-template-columns: auto 75%;
+}
+
+a {
+    color: var(--red);
+}
+
+/* images */
+.img-responsive 
+{
+    /* sizing */
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1000px)
+{
+    /* text */
+    h1
+    {
+        font-size: 40px;
+    }
+
+    h2
+    {
+        font-size: 30px;
+    }
+
+    h3
+    {
+        font-size: 25px;
+    }
+
+    h4
+    {
+        font-size: 20px;
+    }
+
+    h5
+    {
+        font-size: 10px;
+    }
+
+    h6
+    {
+        font-size: 8px;
+    }
+
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-long-left,
+    .col-long-right
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
